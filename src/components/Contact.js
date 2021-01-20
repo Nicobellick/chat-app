@@ -3,20 +3,23 @@ import './Contact.css'
 
 
 
-const Contact = () => {
+
+const Contact = (props) => {
     return(
             <div className='Contact'>
-                <img src='https://randomuser.me/api/portraits/women/73.jpg' alt='RandomPicture' className='avatar' />
+                <img src={props.avatar} alt='RandomPicture' className='avatar' />
                 <div>
-                <p className='name'>Quentin Kaiser</p>
+                <p className='name'>{props.name}</p>
                 <div className='status'>
                     
-                <div className='status-online'></div>
-                <p className='status-text'>Available</p>
+                <div className={props.online ? 'status-online' : 'status-offline'}></div>
+                <p className='status-text'>{props.online ? "Available" : "Offline"}</p>
                 </div>
                 </div>
             </div>
     )
 }
+
+//
 
 export default Contact
