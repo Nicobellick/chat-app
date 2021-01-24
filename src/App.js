@@ -1,19 +1,20 @@
 import Contact from './components/Contact'
 import propTypes from 'prop-types';
+import ContactList from './components/ContactList'
 
 function App() {
   return (
     <div className="App">
-      <Contact name ="Quentin" avatar="https://randomuser.me/api/portraits/men/21.jpg" online/>
-      <Contact name ="Kaiser" avatar="https://randomuser.me/api/portraits/women/86.jpg"  />
-      <Contact name='Kaiser de Quentin' avatar="https://randomuser.me/api/portraits/men/56.jpg" online/>
+   <ContactList /> 
+  
     </div>
   );
 }
 
 Contact.propTypes = {
   name: propTypes.string.isRequired,
-  avatar: propTypes.string.isRequired
+  avatar: propTypes.string.isRequired,
+  // online: propTypes.bool.isRequired but not necessary in my code
   
 }
 
